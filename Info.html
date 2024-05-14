@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,216 +16,254 @@
       rel="stylesheet"
     />
     <style>
-        
-@media (max-width:600px) {
+      .mainContainer {
+        min-height: 100vh;
+        height: fit-content;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+      }
+      #content {
+        justify-self: start;
+        place-self: start;
+        justify-content: start;
+        align-items: start;
+        margin-bottom: auto;
+      }
+      footer {
+        width: 100%;
+      }
+      p {
+        padding-left: 32px;
+      }
+      @media (max-width: 600px) {
+        .splash img {
+          height: 20vw;
+          width: 20vw;
+          border-radius: 20%;
+          animation: splash-animation 1s ease-in forwards infinite alternate;
+        }
 
-.splash img{
-    height: 20vw;
-    width: 20vw;
-    border-radius: 20%;
-    animation: splash-animation 1s ease-in forwards infinite alternate;
-}
+        @keyframes splash-animation {
+          0% {
+            transform: translateY(0%);
+            box-shadow: 0.2vw 0.2vw 0.2vw white;
+          }
+          100% {
+            transform: translateY(40%);
+            box-shadow: 1.5vw 1.5vw 1.9vw white;
+          }
+        }
+        nav {
+          padding: 7px;
+          height: 75px;
+          border-bottom: 2px solid rgb(255, 255, 255);
+          width: 100%;
+          justify-content: space-between;
+          align-items: start;
+        }
+        nav img {
+          margin: 3px;
+          display: inline;
+          height: 55px;
+          width: 55px;
+        }
+        nav ul {
+          display: none;
+        }
 
+        nav i {
+          display: inline;
+          font-size: 50px;
+        }
 
-@keyframes splash-animation {
-    0% {
-        transform: translateY(0%);
-        box-shadow: 0.2vw 0.2vw 0.2vw white;
-    }
-    100% {
-        transform: translateY(40%);
-        box-shadow: 1.5vw 1.5vw 1.9vw white;
-    }
-}
-nav {  
-    padding: 7px;
-    height: 75px;
-    border-bottom: 2px solid rgb(255, 255, 255);
-    width: 100%;
-    justify-content: space-between;
-    align-items: start;
+        #content {
+          height: fit-content;
+          width: 100%;
+        }
 
-}
-nav img{
-    margin: 3px;
-    display: inline;
-    height: 55px;
-    width: 55px;
+        .left {
+          padding-top: 20px;
+          padding-left: 10px;
+          padding-right: 10px;
+          height: 100%;
+          width: 100%;
+          font-size: 10px;
+          width: 100%;
+        }
 
-    
-}
-nav ul {
-    display: none;
-}
+        .right {
+          height: auto;
+          width: 100%;
+          position: absolute;
+          object-fit: cover;
+          z-index: -1;
+        }
 
-nav i{
-    display: inline;
-    font-size: 50px;
-}
+        footer {
+          height: 100px;
+          width: 100%;
+        }
 
-#content{
-    height: calc(100% - 75px - 100px); 
-    width: 100%;
-}
-
-.left{
-    padding-top: 20px;
-    padding-left: 10px;
-    padding-right: 10px;
-    height:100%;
-    width: 100%;
-    font-size: 10px;
-    width: 100%;
-}
-
-.right {
-    
-    height: auto;
-    width: 100%;
-    position: absolute;
-    object-fit: cover;
-    z-index: -1;
-}
-
-
-footer{
-    height: 100px;
-    width: 100%;
-}
-
-.footer {
-    padding-top: 9px;
-    display: flex;
-    flex-direction: column;
-    
-}
-.footer p{
-    
-    font-size: 20px;
-
-}
-.footer i{
-    font-size: 23px;
-    margin: 0 14px;
-}
-}
-
-
-
-
+        .footer {
+          padding-top: 9px;
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+        }
+        .footer p {
+          font-size: 20px;
+        }
+        .footer i {
+          font-size: 23px;
+          margin: 0 14px;
+        }
+      }
     </style>
-</head>
-<body>
-    <main>
-        <div id="back"></div>
-        
-        <video
-          muted
-          autoplay
-          loop
-          class="bg"
-          src="assets/HD Free Background Motion Graphics Video _ Visual Effects _ After Effect _ Snowfall _ Christmas.mp4"
-        ></video>
-         <!-- developed and maintained by SAMEER K - For PLATYUNS  -->
-        <nav>
-          <a onmousedown="sound2.play()" href="index.html">
-  
-              <img  class="logo" src="assets/IMG-20240220-WA0016.jpg" alt="Image not loaded" />
-          </a>
-          <ul class="sidebar">
-            <i onmousedown="sound2.play()" onclick=hideSidebar() class="ri-close-line"></i>
-            <li><a onmousedown="sound.play()" href="index.html">Home</a></li>
-          <li><a onmousedown="sound.play()" href="collections.html">Collections</a></li>
+  </head>
+  <body>
+    <main class="mainContainer">
+      <div id="back"></div>
+
+      <video
+        muted
+        autoplay
+        loop
+        class="bg"
+        src="assets/HD Free Background Motion Graphics Video _ Visual Effects _ After Effect _ Snowfall _ Christmas.mp4"
+      ></video>
+      <!-- developed and maintained by SAMEER K - For PLATYUNS  -->
+      <nav>
+        <a onmousedown="sound2.play()" href="index.html">
+          <img
+            class="logo"
+            src="assets/IMG-20240220-WA0016.jpg"
+            alt="Image not loaded"
+          />
+        </a>
+        <ul class="sidebar">
+          <i
+            onmousedown="sound2.play()"
+            onclick="hideSidebar()"
+            class="ri-close-line"
+          ></i>
+          <li><a onmousedown="sound.play()" href="index.html">Home</a></li>
+          <li>
+            <a onmousedown="sound.play()" href="collections.html"
+              >Collections</a
+            >
+          </li>
           <li><a onmousedown="sound.play()" href="Info.html">Info</a></li>
           <li><a onmousedown="sound.play()" href="about.html">About</a></li>
-          </ul>
-          <ul>
-            <li><a onmousedown="sound.play()" href="index.html">Home</a></li>
-            <li><a onmousedown="sound.play()" href="collections.html">Collections</a></li>
-            <li><a onmousedown="sound.play()" href="Info.html">Info</a></li>
-            <li><a onmousedown="sound.play()" href="about.html">About</a></li>
-  
-          </ul>
-          <i onmousedown="sound2.play()" onclick=showSidebar() class="ri-menu-3-line"></i>
-        </nav>
-        <div id="content">
-            <div class="left" style="width: 100%;">
-                  
-                  <h1 onmouseenter="typing.play()">
-                    The Platyuns Club 
-                      <span class="typing"></span>
-                  </h1>
-                  
-              </div>
-          
-        
-             
-         
+        </ul>
+        <ul>
+          <li><a onmousedown="sound.play()" href="index.html">Home</a></li>
+          <li>
+            <a onmousedown="sound.play()" href="collections.html"
+              >Collections</a
+            >
+          </li>
+          <li><a onmousedown="sound.play()" href="Info.html">Info</a></li>
+          <li><a onmousedown="sound.play()" href="about.html">About</a></li>
+        </ul>
+        <i
+          onmousedown="sound2.play()"
+          onclick="showSidebar()"
+          class="ri-menu-3-line"
+        ></i>
+      </nav>
+      <div id="content">
+        <div class="left" style="width: 100%">
+          <h1 onmouseenter="typing.play()">
+            The Platyuns Club
+            <span class="typing"></span>
+          </h1>
         </div>
-        <footer>
-          <div class="footer">
-            <p>@ platyuns by Ordinal</p>
-            <ul class="socials">
-              
-              <a href="https://twitter.com/ThePlatyunsClub">
-                <i onmousedown="sound.play()" class="ri-twitter-x-line"></i>
-              </a>
-  
-              <a href=""><i onmousedown="sound.play()" class="ri-discord-fill"></i></a>
-              <!-- <a href="https://www.linkedin.com/in/sameer-khan-81748522a/"><i onmousedown="sound.play()" class="ri-linkedin-box-fill"></i></a> -->
-            </ul>
-            <div class="footer-copyright">
-              <p>copyright &copy;2024</p>
-            </div>
+      </div>
+      <footer>
+        <div class="footer">
+          <p>@ platyuns by Ordinal</p>
+          <ul class="socials">
+            <a href="https://twitter.com/ThePlatyunsClub">
+              <i onmousedown="sound.play()" class="ri-twitter-x-line"></i>
+            </a>
+
+            <a href=""
+              ><i onmousedown="sound.play()" class="ri-discord-fill"></i
+            ></a>
+            <!-- <a href="https://www.linkedin.com/in/sameer-khan-81748522a/"><i onmousedown="sound.play()" class="ri-linkedin-box-fill"></i></a> -->
+          </ul>
+          <div class="footer-copyright">
+            <p>copyright &copy;2024</p>
           </div>
-        </footer>
-      </main>
-      <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-      <script>
-          var typed = new Typed(".typing",{
-              strings : ["Imagine a unique digital art collection called The Platyuns Club (TPC). It's a pioneering project that aims to revolutionize the concept of NFTs (non-fungible tokens). TPC is more than just a collection of digital images; it's an immersive experience that combines creativity, community, and social responsibility. Here's how it works: - TPC features 10,000 meticulously crafted NFTs, each with its own distinct design and character. - These NFTs are not just digital images; they serve as a symbol of prestige and a source of entertainment. - The project bridges the gap between the world of Bitcoin and NFTs, bringing a fresh perspective to the NFT space. - TPC has a utility token that provides additional benefits and utilities to holders. - The project is community-centric, meaning every holder is valued and actively involved in the journey. Now, here's where it gets even more exciting! After the project sells out, TPC will launch an exclusive merchandise line featuring unique designs and premium materials. A portion of the proceeds will go towards supporting individuals with disabilities, making a meaningful impact on their lives. The project's vision extends beyond the digital realm, fostering a sense of community and social responsibility. TPC is more than just an NFT collection; it's a movement that combines creativity, innovation, and compassion. That's The Platyuns Club in a nutshell! A groundbreaking project that redefines the possibilities of digital art and ownership, while making a positive impact on the world"],
-              typeSpeed : 20,
-              
-              
-              
-          })
-      </script>
-  
-      <script>
-          const splash = document.querySelector('.splash');
-  
-  document.addEventListener('DOMContentLoaded',(e)=>{
-      setTimeout(()=> {
-          splash.classList.add('display-none')
-      },2000)
-  })
-      </script>
-  
-      <script>
-        function showSidebar(){
-          const sidebar = document.querySelector('.sidebar')
-          sidebar.style.display = 'flex'
-        }
-  
-        function hideSidebar(){
-          const sidebar = document.querySelector('.sidebar')
-          sidebar.style.display = 'none'
-        }
-  
-  
-      </script>
-  
-      <script>
-        var sound = new Audio();
-        sound.src = "Audios/mixkit-arcade-video-game-bonus-2044.wav"
-  
-        var sound2 = new Audio();
-        sound2.src = "Audios/mixkit-arcade-retro-jump-223.wav"
-  
-        var typing = new Audio();
-        typing.src = "Audios/keyboard-typing-5997.mp3"
-  
-  
-      </script>
-</body>
+        </div>
+      </footer>
+    </main>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+      var typed = new Typed(".typing", {
+        strings: [
+          "Imagine a unique digital art collection called The Platyuns Club (TPC). It's a pioneering project that aims to revolutionize the concept of NFTs (non-fungible tokens). TPC is more than just a collection of digital images; it's an immersive experience that combines creativity, community, and social responsibility.<br><br> Here's how it works:<br><p>- TPC features 10,000 meticulously crafted NFTs, each with its own distinct design and character.</p><p>- These NFTs are not just digital images; they serve as a symbol of prestige and a source of entertainment.</p><p>- The project bridges the gap between the world of Bitcoin and NFTs, bringing a fresh perspective to the NFT space.</p><p>- TPC has a utility token that provides additional benefits and utilities to holders.</p><p>- The project is community-centric, meaning every holder is valued and actively involved in the journey.</p><br> Now, here's where it gets even more exciting!<br><br> After the project sells out, TPC will launch an exclusive merchandise line featuring unique designs and premium materials. A portion of the proceeds will go towards supporting individuals with disabilities, making a meaningful impact on their lives.<br><br> The project's vision extends beyond the digital realm, fostering a sense of community and social responsibility. TPC is more than just an NFT collection; it's a movement that combines creativity, innovation, and compassion.<br><br> That's The Platyuns Club in a nutshell! A groundbreaking project that redefines the possibilities of digital art and ownership, while making a positive impact on the world.",
+        ],
+        typeSpeed: 24,
+      });
+    </script>
+
+    <script>
+      const splash = document.querySelector(".splash");
+
+      document.addEventListener("DOMContentLoaded", (e) => {
+        setTimeout(() => {
+          splash.classList.add("display-none");
+        }, 2000);
+      });
+    </script>
+
+    <script>
+      function showSidebar() {
+        const sidebar = document.querySelector(".sidebar");
+        sidebar.style.display = "flex";
+      }
+
+      function hideSidebar() {
+        const sidebar = document.querySelector(".sidebar");
+        sidebar.style.display = "none";
+      }
+    </script>
+
+    <script>
+      var sound = new Audio();
+      sound.src = "Audios/mixkit-arcade-video-game-bonus-2044.wav";
+
+      var sound2 = new Audio();
+      sound2.src = "Audios/mixkit-arcade-retro-jump-223.wav";
+
+      var typing = new Audio();
+      typing.src = "Audios/keyboard-typing-5997.mp3";
+    </script>
+  </body>
 </html>
+
+<!-- Imagine a unique digital art collection called The Platyuns Club (TPC). It's a pioneering project that aims to revolutionize the concept of NFTs (non-fungible tokens). TPC is more than just a collection of digital images; it's an immersive experience that combines creativity, community, and social responsibility.
+
+Here's how it works:
+
+- TPC features 10,000 meticulously crafted NFTs, each with its own distinct design and character.
+
+- These NFTs are not just digital images; they serve as a symbol of prestige and a source of entertainment.
+
+- The project bridges the gap between the world of Bitcoin and NFTs, bringing a fresh perspective to the NFT space.
+
+- TPC has a utility token that provides additional benefits and utilities to holders.
+
+- The project is community-centric, meaning every holder is valued and actively involved in the journey.
+
+Now, here's where it gets even more exciting!
+
+After the project sells out, TPC will launch an exclusive merchandise line featuring unique designs and premium materials. A portion of the proceeds will go towards supporting individuals with disabilities, making a meaningful impact on their lives.
+
+The project's vision extends beyond the digital realm, fostering a sense of community and social responsibility. TPC is more than just an NFT collection; it's a movement that combines creativity, innovation, and compassion.
+
+That's The Platyuns Club in a nutshell! A groundbreaking project that redefines the possibilities of digital art and ownership, while making a positive impact on the world. -->
