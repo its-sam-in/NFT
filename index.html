@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Platyuns</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,6 +15,7 @@
       href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
       rel="stylesheet"
     />
+    <link rel="icon" type="image/x-icon" href="assets/IMG-20240220-WA0016.jpg">
   </head>
   <body>
     <div class="splash">
@@ -39,14 +40,20 @@
         </a>
         <ul class="sidebar">
           <i onmousedown="sound2.play()" onclick=hideSidebar() class="ri-close-line"></i>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="#about">About</a></li>
+          <li><a onmousedown="sound.play()" href="index.html">Home</a></li>
+          <li><a onmousedown="sound.play()" href="collections.html">Collections</a></li>
+          <li><a onmousedown="sound.play()" href="Info.html">Info</a></li>
+          <li><a onmousedown="sound.play()" href="about.html">About</a></li>
         </ul>
+
+
+
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="#about">About</a></li>
+          <li><a onmousedown="sound.play()" href="index.html">Home</a></li>
+          <!-- <li><a href="#contact">Contact</a></li> -->
+          <li><a onmousedown="sound.play()" href="collections.html">Collections</a></li>
+          <li><a onmousedown="sound.play()" href="Info.html">Info</a></li>
+          <li><a onmousedown="sound.play()" href="about.html">About</a></li>
 
         </ul>
         <i onmousedown="sound2.play()" onclick=showSidebar() class="ri-menu-3-line"></i>
@@ -70,15 +77,15 @@
       </div>
       <footer>
         <div class="footer">
-          <p>@ platyuns by Solana</p>
+          <p>@ platyuns by Ordinal</p>
           <ul class="socials">
             
-            <a href="https://twitter.com/i/flow/login?redirect_after_login=%2FThePlatyunsClub">
+            <a href="https://twitter.com/ThePlatyunsClub">
               <i onmousedown="sound.play()" class="ri-twitter-x-line"></i>
             </a>
 
             <a href=""><i onmousedown="sound.play()" class="ri-discord-fill"></i></a>
-            <a href="https://www.linkedin.com/in/sameer-khan-81748522a/"><i onmousedown="sound.play()" class="ri-linkedin-box-fill"></i></a>
+            <!-- <a href="https://www.linkedin.com/in/sameer-khan-81748522a/"><i onmousedown="sound.play()" class="ri-linkedin-box-fill"></i></a> -->
           </ul>
           <div class="footer-copyright">
             <p>copyright &copy;2024</p>
@@ -89,7 +96,7 @@
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script>
         var typed = new Typed(".typing",{
-            strings : ["We are the Platypus, arriving from Platypus City with a vision to revitalize the Solana blockchain. A team of 10,000 Platypus, we aspire to establish our Crypto Haven on Solana and kindly seek your approval for this ambitious venture.","","We are the Platypus, arriving from Platypus City with a vision to revitalize the Solana blockchain. A team of 10,000 Platypus, we aspire to establish our Crypto Haven on Solana and kindly seek your approval for this ambitious venture."],
+            strings : ["We are the Platypus, arriving from Platypus City with a vision to revitalize the Ordinal blockchain. A team of 10,000 Platypus, we aspire to establish our Crypto Haven on Ordinal and kindly seek your approval for this ambitious venture.","","We are the Platypus, arriving from Platypus City with a vision to revitalize the Ordinal blockchain. A team of 10,000 Platypus, we aspire to establish our Crypto Haven on Ordinal and kindly seek your approval for this ambitious venture."],
             typeSpeed : 130,
             backSpeed :30,
             

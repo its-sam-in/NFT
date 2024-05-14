@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <style>
+      .effect {
+        display: flex;
+        height: 33.3%;
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .effectmain {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .image-container {
+        display: flex;
+        animation-duration: 20s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+      }
+
+      .effect .image-container img {
+        width: auto;
+        height: 100%;
+        position: relative;
+      }
+
+      @keyframes moveLeftToRight {
+        0% {
+          transform: translateX(-200%);
+        }
+        100% {
+          transform: translateX(100%);
+        }
+      }
+
+      @keyframes moveRightToLeft {
+        0% {
+          transform: translateX(0%);
+        }
+        100% {
+          transform: translateX(-200%);
+        }
+      }
+
+      .effect:nth-child(odd) .image-container {
+        animation-name: moveLeftToRight;
+      }
+
+      .effect:nth-child(even) .image-container {
+        animation-name: moveRightToLeft;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div id="back"></div>
+
+      <video
+        muted
+        autoplay
+        loop
+        class="bg"
+        src="assets/HD Free Background Motion Graphics Video _ Visual Effects _ After Effect _ Snowfall _ Christmas.mp4"
+      ></video>
+      <!-- developed and maintained by SAMEER K - For PLATYUNS  -->
+      <nav>
+        <a onmousedown="sound2.play()" href="index.html">
+          <img
+            class="logo"
+            src="assets/IMG-20240220-WA0016.jpg"
+            alt="Image not loaded"
+          />
+        </a>
+        <ul class="sidebar">
+          <i
+            onmousedown="sound2.play()"
+            onclick="hideSidebar()"
+            class="ri-close-line"
+          ></i>
+          <li><a onmousedown="sound.play()" href="index.html">Home</a></li>
+          <li><a onmousedown="sound.play()" href="collections.html">Collections</a></li>
+          <li><a onmousedown="sound.play()" href="Info.html">Info</a></li>
+          <li><a onmousedown="sound.play()" href="about.html">About</a></li>
+        </ul>
+        <ul>
+            <li><a onmousedown="sound.play()" href="index.html">Home</a></li>
+            <li><a onmousedown="sound.play()" href="collections.html">Collections</a></li>
+            <li><a onmousedown="sound.play()" href="Info.html">Info</a></li>
+            <li><a onmousedown="sound.play()" href="about.html">About</a></li>
+        </ul>
+        <i
+          onmousedown="sound2.play()"
+          onclick="showSidebar()"
+          class="ri-menu-3-line"
+        ></i>
+      </nav>
+      <div id="content">
+        <div class="effectmain">
+          <div class="effect">
+            <div class="image-container">
+              <img src="./assets/NFTs/50.jpeg" alt="" />
+              <img src="./assets/NFTs/51.jpeg" alt="" />
+              <img src="./assets/NFTs/52.jpeg" alt="" />
+              <img src="./assets/NFTs/53.jpeg" alt="" />
+              <img src="./assets/NFTs/54.jpeg" alt="" />
+              <img src="./assets/NFTs/55.jpeg" alt="" />
+              <img src="./assets/NFTs/56.jpeg" alt="" />
+              <img src="./assets/NFTs/57.jpeg" alt="" />
+              <img src="./assets/NFTs/58.jpeg" alt="" />
+              <img src="./assets/NFTs/59.jpeg" alt="" />
+              <img src="./assets/NFTs/60.jpeg" alt="" />
+              <img src="./assets/NFTs/61.jpeg" alt="" />
+              <img src="./assets/NFTs/62.jpeg" alt="" />
+              <img src="./assets/NFTs/63.jpeg" alt="" />
+              <img src="./assets/NFTs/64.jpeg" alt="" />
+              <img src="./assets/NFTs/65.jpeg" alt="" />
+              <img src="./assets/NFTs/66.jpeg" alt="" />
+              <img src="./assets/NFTs/67.jpeg" alt="" />
+              <img src="./assets/NFTs/68.jpeg" alt="" />
+              <img src="./assets/NFTs/69.jpeg" alt="" />
+              <img src="./assets/NFTs/70.jpeg" alt="" />
+              <img src="./assets/NFTs/71.jpeg" alt="" />
+              <img src="./assets/NFTs/72.jpeg" alt="" />
+              <img src="./assets/NFTs/73.jpeg" alt="" />
+
+              <img src="./assets/NFTs/50.jpeg" alt="" />
+              <img src="./assets/NFTs/51.jpeg" alt="" />
+              <img src="./assets/NFTs/52.jpeg" alt="" />
+              <img src="./assets/NFTs/53.jpeg" alt="" />
+              <img src="./assets/NFTs/54.jpeg" alt="" />
+              <img src="./assets/NFTs/55.jpeg" alt="" />
+              <img src="./assets/NFTs/56.jpeg" alt="" />
+              <img src="./assets/NFTs/57.jpeg" alt="" />
+              <img src="./assets/NFTs/58.jpeg" alt="" />
+              <img src="./assets/NFTs/59.jpeg" alt="" />
+              <img src="./assets/NFTs/60.jpeg" alt="" />
+              <img src="./assets/NFTs/61.jpeg" alt="" />
+              <img src="./assets/NFTs/62.jpeg" alt="" />
+              <img src="./assets/NFTs/63.jpeg" alt="" />
+              <img src="./assets/NFTs/64.jpeg" alt="" />
+              <img src="./assets/NFTs/65.jpeg" alt="" />
+              <img src="./assets/NFTs/66.jpeg" alt="" />
+              <img src="./assets/NFTs/67.jpeg" alt="" />
+              <img src="./assets/NFTs/68.jpeg" alt="" />
+              <img src="./assets/NFTs/69.jpeg" alt="" />
+              <img src="./assets/NFTs/70.jpeg" alt="" />
+              <img src="./assets/NFTs/71.jpeg" alt="" />
+              <img src="./assets/NFTs/72.jpeg" alt="" />
+              <img src="./assets/NFTs/73.jpeg" alt="" />
+
+            </div>
+          </div>
+          <div class="effect">
+            <div class="image-container">
+              <img src="./assets/NFTs/50.jpeg" alt="" />
+              <img src="./assets/NFTs/51.jpeg" alt="" />
+              <img src="./assets/NFTs/52.jpeg" alt="" />
+              <img src="./assets/NFTs/53.jpeg" alt="" />
+              <img src="./assets/NFTs/54.jpeg" alt="" />
+              <img src="./assets/NFTs/55.jpeg" alt="" />
+              <img src="./assets/NFTs/56.jpeg" alt="" />
+              <img src="./assets/NFTs/57.jpeg" alt="" />
+              <img src="./assets/NFTs/58.jpeg" alt="" />
+              <img src="./assets/NFTs/59.jpeg" alt="" />
+              <img src="./assets/NFTs/60.jpeg" alt="" />
+              <img src="./assets/NFTs/61.jpeg" alt="" />
+              <img src="./assets/NFTs/62.jpeg" alt="" />
+              <img src="./assets/NFTs/63.jpeg" alt="" />
+              <img src="./assets/NFTs/64.jpeg" alt="" />
+              <img src="./assets/NFTs/65.jpeg" alt="" />
+              <img src="./assets/NFTs/66.jpeg" alt="" />
+              <img src="./assets/NFTs/67.jpeg" alt="" />
+              <img src="./assets/NFTs/68.jpeg" alt="" />
+              <img src="./assets/NFTs/69.jpeg" alt="" />
+              <img src="./assets/NFTs/70.jpeg" alt="" />
+              <img src="./assets/NFTs/71.jpeg" alt="" />
+              <img src="./assets/NFTs/72.jpeg" alt="" />
+              <img src="./assets/NFTs/73.jpeg" alt="" />
+            </div>
+          </div>
+          <div class="effect">
+            <div class="image-container">
+              <img src="./assets/NFTs/50.jpeg" alt="" />
+              <img src="./assets/NFTs/51.jpeg" alt="" />
+              <img src="./assets/NFTs/52.jpeg" alt="" />
+              <img src="./assets/NFTs/53.jpeg" alt="" />
+              <img src="./assets/NFTs/54.jpeg" alt="" />
+              <img src="./assets/NFTs/55.jpeg" alt="" />
+              <img src="./assets/NFTs/56.jpeg" alt="" />
+              <img src="./assets/NFTs/57.jpeg" alt="" />
+              <img src="./assets/NFTs/58.jpeg" alt="" />
+              <img src="./assets/NFTs/59.jpeg" alt="" />
+              <img src="./assets/NFTs/60.jpeg" alt="" />
+              <img src="./assets/NFTs/61.jpeg" alt="" />
+              <img src="./assets/NFTs/62.jpeg" alt="" />
+              <img src="./assets/NFTs/63.jpeg" alt="" />
+              <img src="./assets/NFTs/64.jpeg" alt="" />
+              <img src="./assets/NFTs/65.jpeg" alt="" />
+              <img src="./assets/NFTs/66.jpeg" alt="" />
+              <img src="./assets/NFTs/67.jpeg" alt="" />
+              <img src="./assets/NFTs/68.jpeg" alt="" />
+              <img src="./assets/NFTs/69.jpeg" alt="" />
+              <img src="./assets/NFTs/70.jpeg" alt="" />
+              <img src="./assets/NFTs/71.jpeg" alt="" />
+              <img src="./assets/NFTs/72.jpeg" alt="" />
+              <img src="./assets/NFTs/73.jpeg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <div class="footer">
+          <p>@ platyuns by Ordinal</p>
+          <ul class="socials">
+            <a href="https://twitter.com/ThePlatyunsClub">
+              <i onmousedown="sound.play()" class="ri-twitter-x-line"></i>
+            </a>
+            <a href=""
+              ><i onmousedown="sound.play()" class="ri-discord-fill"></i
+            ></a>
+          </ul>
+          <div class="footer-copyright">
+            <p>copyright &copy;2024</p>
+          </div>
+        </div>
+      </footer>
+    </main>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+      var typed = new Typed(".typing", {
+        strings: [
+          "In 'The Platyuns Club NFT' collection, we're not just offering digital assets; we're unveiling a portal to a realm of exclusive digital artistry. Each Platyun is a carefully crafted masterpiece, resonating with cool vibes that are bound to set the NFT scene ablaze. As you explore our collection on the dynamic Bitcoin blockchain, envision owning more than just an NFT – envision possessing a symbol of digital sophistication and unique expression. Join us on this journey where The Platyuns Club is not just a collection; it's a declaration of style and exclusivity in the thrilling world of blockchain creativity!",
+        ],
+        typeSpeed: 90,
+      });
+    </script>
+
+    <script>
+      const splash = document.querySelector(".splash");
+
+      document.addEventListener("DOMContentLoaded", (e) => {
+        setTimeout(() => {
+          splash.classList.add("display-none");
+        }, 2000);
+      });
+    </script>
+
+    <script>
+      function showSidebar() {
+        const sidebar = document.querySelector(".sidebar");
+        sidebar.style.display = "flex";
+      }
+
+      function hideSidebar() {
+        const sidebar = document.querySelector(".sidebar");
+        sidebar.style.display = "none";
+      }
+    </script>
+
+    <script>
+      var sound = new Audio();
+      sound.src = "Audios/mixkit-arcade-video-game-bonus-2044.wav";
+
+      var sound2 = new Audio();
+      sound2.src = "Audios/mixkit-arcade-retro-jump-223.wav";
+
+      var typing = new Audio();
+      typing.src = "Audios/keyboard-typing-5997.mp3";
+    </script>
+  </body>
+</html>
+
