@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Wallet Checker</title>
+    <link rel="stylesheet" href="./checker.css" />
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,92 +16,17 @@
       href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
       rel="stylesheet"
     />
-    <style>
-      @media (max-width: 600px) {
-        .splash img {
-          height: 20vw;
-          width: 20vw;
-          border-radius: 20%;
-          animation: splash-animation 1s ease-in forwards infinite alternate;
-        }
-
-        @keyframes splash-animation {
-          0% {
-            transform: translateY(0%);
-            box-shadow: 0.2vw 0.2vw 0.2vw white;
-          }
-          100% {
-            transform: translateY(40%);
-            box-shadow: 1.5vw 1.5vw 1.9vw white;
-          }
-        }
-        nav {
-          padding: 7px;
-          height: 75px;
-          border-bottom: 2px solid rgb(255, 255, 255);
-          width: 100%;
-          justify-content: space-between;
-          align-items: start;
-        }
-        nav img {
-          margin: 3px;
-          display: inline;
-          height: 55px;
-          width: 55px;
-        }
-        nav ul {
-          display: none;
-        }
-
-        nav i {
-          display: inline;
-          font-size: 50px;
-        }
-
-        #content {
-          height: calc(100% - 75px - 100px);
-          width: 100%;
-        }
-
-        .left {
-          padding-top: 20px;
-          padding-left: 10px;
-          padding-right: 10px;
-          height: 100%;
-          width: 100%;
-          font-size: 10px;
-          width: 100%;
-        }
-
-        .right {
-          height: auto;
-          width: 100%;
-          position: absolute;
-          object-fit: cover;
-          z-index: -1;
-        }
-
-        footer {
-          height: 100px;
-          width: 100%;
-        }
-
-        .footer {
-          padding-top: 9px;
-          display: flex;
-          flex-direction: column;
-        }
-        .footer p {
-          font-size: 20px;
-        }
-        .footer i {
-          font-size: 23px;
-          margin: 0 14px;
-        }
-      }
-    </style>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="assets/IMG-20240220-WA0016.jpg"
+    />
   </head>
   <body>
+    <div class="splashCheckLogo">
+      <img src="assets/checklogo.jpg" alt="Image not loaded" />
+    </div>
+
     <main>
       <div id="back"></div>
 
@@ -136,9 +62,12 @@
           <li><a onmousedown="sound.play()" href="Info.html">Info</a></li>
           <li><a onmousedown="sound.play()" href="about.html">About</a></li>
         </ul>
+
         <ul>
           <li><a onmousedown="sound.play()" href="id.html">Id</a></li>
+
           <li><a onmousedown="sound.play()" href="index.html">Home</a></li>
+          <!-- <li><a href="#contact">Contact</a></li> -->
           <li>
             <a onmousedown="sound.play()" href="collections.html"
               >Collections</a
@@ -154,16 +83,28 @@
         ></i>
       </nav>
       <div id="content">
-        <div class="left" style="width: 100%">
-          <h1 onmouseenter="typing.play()">
-            WE ARE HERE !
-            <span class="typing"></span>
-          </h1>
+        <div class="checkContainer">
+          <img
+            src="assets/checklogo.jpg"
+            alt="Image not loaded"
+            width="360"
+            height="300"
+          />
+          <div class="container">
+            <h2>Wallet Checker</h2>
+            <input
+              autocomplete="off"
+              type="text"
+              id="idInput"
+              placeholder="Enter your ID..."
+            />
+            <button onclick="checkID()">Check ID</button>
+            <div id="result"></div>
+          </div>
         </div>
       </div>
       <footer>
         <div class="footer">
-          <p>@ platyuns by Ordinal</p>
           <ul class="socials">
             <a href="https://twitter.com/ThePlatyunsClub">
               <i onmousedown="sound.play()" class="ri-twitter-x-line"></i>
@@ -174,24 +115,13 @@
             ></a>
             <!-- <a href="https://www.linkedin.com/in/sameer-khan-81748522a/"><i onmousedown="sound.play()" class="ri-linkedin-box-fill"></i></a> -->
           </ul>
-          <div class="footer-copyright">
-            <p>copyright &copy;2024</p>
-          </div>
         </div>
       </footer>
     </main>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script>
-      var typed = new Typed(".typing", {
-        strings: [
-          "In 'The Platyuns Club NFT' collection, we're not just offering digital assets; we're unveiling a portal to a realm of exclusive digital artistry. Each Platyun is a carefully crafted masterpiece, resonating with cool vibes that are bound to set the NFT scene ablaze. As you explore our collection on the dynamic Bitcoin blockchain, envision owning more than just an NFT – envision possessing a symbol of digital sophistication and unique expression. Join us on this journey where The Platyuns Club is not just a collection; it's a declaration of style and exclusivity in the thrilling world of blockchain creativity!",
-        ],
-        typeSpeed: 90,
-      });
-    </script>
 
     <script>
-      const splash = document.querySelector(".splash");
+      const splash = document.querySelector(".splashCheckLogo");
 
       document.addEventListener("DOMContentLoaded", (e) => {
         setTimeout(() => {
@@ -222,5 +152,9 @@
       var typing = new Audio();
       typing.src = "Audios/keyboard-typing-5997.mp3";
     </script>
+    <script src="script.js"></script>
+
+    <link rel="stylesheet" href="app.js" />
   </body>
+  <!-- developed and maintained by SAMEER K - For PLATYUNS  -->
 </html>
